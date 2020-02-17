@@ -14,13 +14,13 @@ cds.deploy('srv').to('sqlite::memory:',{primary:true}) .then (async db => {
 
 	const epmbp = db.run (INSERT.into (EPMBusinessPartner+'') .entries (
 		{
-			BpId: '1003764',
+			BpId: '100000000',
 			CompanyName: 'SAP',
 			City: 'Walldorf',
 			Street: 'Dietmar-Hopp-Allee'
 		},
 		{
-			BpId: '1003765',
+			BpId: '100000001',
 			CompanyName: 'Computerservice Wolf',
 			City: 'Tacherting',
 			Street: 'Trostberger Straße'
