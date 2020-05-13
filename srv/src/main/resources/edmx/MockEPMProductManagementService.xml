@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+  <edmx:DataServices m:DataServiceVersion="2.0">
+    <Schema Namespace="MockEPMProductManagementService" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <EntityContainer Name="EntityContainer" m:IsDefaultEntityContainer="true">
+        <EntitySet Name="SEPMRA_C_PD_Product" EntityType="MockEPMProductManagementService.SEPMRA_C_PD_Product"/>
+        <EntitySet Name="SEPMRA_C_PD_Supplier" EntityType="MockEPMProductManagementService.SEPMRA_C_PD_Supplier"/>
+        <AssociationSet Name="SEPMRA_C_PD_Product_SiblingEntity" Association="MockEPMProductManagementService.SEPMRA_C_PD_Product_SiblingEntity">
+          <End Role="SEPMRA_C_PD_Product" EntitySet="SEPMRA_C_PD_Product"/>
+          <End Role="SEPMRA_C_PD_Product1" EntitySet="SEPMRA_C_PD_Product"/>
+        </AssociationSet>
+        <AssociationSet Name="SEPMRA_C_PD_Product_to_Supplier" Association="MockEPMProductManagementService.SEPMRA_C_PD_Product_to_Supplier">
+          <End Role="SEPMRA_C_PD_Product" EntitySet="SEPMRA_C_PD_Product"/>
+          <End Role="SEPMRA_C_PD_Supplier" EntitySet="SEPMRA_C_PD_Supplier"/>
+        </AssociationSet>
+      </EntityContainer>
+      <EntityType Name="SEPMRA_C_PD_Product">
+        <Key>
+          <PropertyRef Name="Product"/>
+          <PropertyRef Name="DraftUUID"/>
+          <PropertyRef Name="IsActiveEntity"/>
+        </Key>
+        <Property Name="Product" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false"/>
+        <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false"/>
+        <Property Name="Activation_ac" Type="Edm.Boolean"/>
+        <Property Name="Copy_ac" Type="Edm.Boolean"/>
+        <Property Name="Copy_new_supplier_ac" Type="Edm.Boolean"/>
+        <Property Name="Create_review_post_ac" Type="Edm.Boolean"/>
+        <Property Name="Delete_ext_ac" Type="Edm.Boolean"/>
+        <Property Name="Edit_ac" Type="Edm.Boolean"/>
+        <Property Name="Favorites_add_ac" Type="Edm.Boolean"/>
+        <Property Name="Favorites_remove_ac" Type="Edm.Boolean"/>
+        <Property Name="Favorites_toggle_ac" Type="Edm.Boolean"/>
+        <Property Name="Mycart_add_ac" Type="Edm.Boolean"/>
+        <Property Name="Preparation_ac" Type="Edm.Boolean"/>
+        <Property Name="Validation_ac" Type="Edm.Boolean"/>
+        <Property Name="ProductForEdit_fc" Type="Edm.Int32"/>
+        <Property Name="ProductForEdit" Type="Edm.String" MaxLength="10"/>
+        <Property Name="ProductCategory" Type="Edm.String" MaxLength="40"/>
+        <Property Name="MainProductCategory" Type="Edm.String" MaxLength="40"/>
+        <Property Name="Price" Type="Edm.Decimal" Scale="3" Precision="16"/>
+        <Property Name="Currency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="Height" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="Width" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="Depth" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="DimensionUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="ProductPictureURL" Type="Edm.String" MaxLength="255"/>
+        <Property Name="Supplier" Type="Edm.String" MaxLength="10"/>
+        <Property Name="ProductBaseUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="Weight" Type="Edm.Decimal" Scale="3" Precision="13"/>
+        <Property Name="WeightUnit" Type="Edm.String" MaxLength="3"/>
+        <Property Name="OriginalLanguage" Type="Edm.String" MaxLength="2"/>
+        <Property Name="Name" Type="Edm.String" MaxLength="255"/>
+        <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+        <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+        <Property Name="HasActiveEntity" Type="Edm.Boolean"/>
+        <Property Name="HasDraftEntity" Type="Edm.Boolean"/>
+        <NavigationProperty Name="SiblingEntity" Relationship="MockEPMProductManagementService.SEPMRA_C_PD_Product_SiblingEntity" FromRole="SEPMRA_C_PD_Product" ToRole="SEPMRA_C_PD_Product1"/>
+        <NavigationProperty Name="to_Supplier" Relationship="MockEPMProductManagementService.SEPMRA_C_PD_Product_to_Supplier" FromRole="SEPMRA_C_PD_Product" ToRole="SEPMRA_C_PD_Supplier"/>
+        <Property Name="DraftAdministrativeData_DraftUUID" Type="Edm.Guid"/>
+        <Property Name="SiblingEntity_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="SiblingEntity_DraftUUID" Type="Edm.Guid"/>
+        <Property Name="SiblingEntity_IsActiveEntity" Type="Edm.Boolean"/>
+        <Property Name="to_CollaborativeReview_ProductReviewUUID" Type="Edm.Guid"/>
+        <Property Name="to_CollaborativeReviewPost_ProductReviewPostUUID" Type="Edm.Guid"/>
+        <Property Name="to_CurrencyVH_Currency" Type="Edm.String" MaxLength="5"/>
+        <Property Name="to_OriginalLanguage_Language" Type="Edm.String" MaxLength="2"/>
+        <Property Name="to_PriceRange_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_ProductCategoryVH_ProductCategory" Type="Edm.String" MaxLength="40"/>
+        <Property Name="to_ProductImage_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_ProductImage_ProductImage" Type="Edm.String" MaxLength="70"/>
+        <Property Name="to_ProductSalesData_ID" Type="Edm.String"/>
+        <Property Name="to_ProductStock_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_ProductText_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_ProductText_Language" Type="Edm.String" MaxLength="2"/>
+        <Property Name="to_ProductText_DraftUUID" Type="Edm.Guid"/>
+        <Property Name="to_ProductText_IsActiveEntity" Type="Edm.Boolean"/>
+        <Property Name="to_ProductTextInOriginalLang_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_ProductTextInOriginalLang_Language" Type="Edm.String" MaxLength="2"/>
+        <Property Name="to_ProductTextInOriginalLang_DraftUUID" Type="Edm.Guid"/>
+        <Property Name="to_ProductTextInOriginalLang_IsActiveEntity" Type="Edm.Boolean"/>
+        <Property Name="to_StorageBin_Product" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_StorageBin_Bin" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_StorageBin_DraftUUID" Type="Edm.Guid"/>
+        <Property Name="to_StorageBin_IsActiveEntity" Type="Edm.Boolean"/>
+      </EntityType>
+      <EntityType Name="SEPMRA_C_PD_Supplier">
+        <Key>
+          <PropertyRef Name="Supplier"/>
+        </Key>
+        <Property Name="Supplier" Type="Edm.String" MaxLength="10" Nullable="false"/>
+        <Property Name="CompanyName" Type="Edm.String" MaxLength="80"/>
+        <Property Name="EmailAddress" Type="Edm.String" MaxLength="255"/>
+        <Property Name="FaxNumber" Type="Edm.String" MaxLength="30"/>
+        <Property Name="PhoneNumber" Type="Edm.String" MaxLength="30"/>
+        <Property Name="URL" Type="Edm.String"/>
+        <Property Name="to_Address_AddressUUID" Type="Edm.Guid"/>
+        <Property Name="to_ContactPerson_ContactPerson" Type="Edm.String" MaxLength="10"/>
+        <Property Name="to_PrimaryContactPerson_ContactPerson" Type="Edm.String" MaxLength="10"/>
+      </EntityType>
+      <Association Name="SEPMRA_C_PD_Product_SiblingEntity">
+        <End Role="SEPMRA_C_PD_Product" Type="MockEPMProductManagementService.SEPMRA_C_PD_Product" Multiplicity="*"/>
+        <End Role="SEPMRA_C_PD_Product1" Type="MockEPMProductManagementService.SEPMRA_C_PD_Product" Multiplicity="0..1"/>
+        <ReferentialConstraint>
+          <Principal Role="SEPMRA_C_PD_Product1">
+            <PropertyRef Name="Product"/>
+            <PropertyRef Name="DraftUUID"/>
+            <PropertyRef Name="IsActiveEntity"/>
+          </Principal>
+          <Dependent Role="SEPMRA_C_PD_Product">
+            <PropertyRef Name="SiblingEntity_Product"/>
+            <PropertyRef Name="SiblingEntity_DraftUUID"/>
+            <PropertyRef Name="SiblingEntity_IsActiveEntity"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+      <Association Name="SEPMRA_C_PD_Product_to_Supplier">
+        <End Role="SEPMRA_C_PD_Product" Type="MockEPMProductManagementService.SEPMRA_C_PD_Product" Multiplicity="*"/>
+        <End Role="SEPMRA_C_PD_Supplier" Type="MockEPMProductManagementService.SEPMRA_C_PD_Supplier" Multiplicity="0..1"/>
+        <ReferentialConstraint>
+          <Principal Role="SEPMRA_C_PD_Supplier">
+            <PropertyRef Name="Supplier"/>
+          </Principal>
+          <Dependent Role="SEPMRA_C_PD_Product">
+            <PropertyRef Name="Supplier"/>
+          </Dependent>
+        </ReferentialConstraint>
+      </Association>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>

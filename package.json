@@ -1,6 +1,6 @@
 {
   "name": "mock-service-gwsample",
-  "description": "Mock Service for SEPMRA_PROD_MAN",
+  "description": "Mock Service for EPM_REF_APPS_PROD_MAN_SRV",
   "version": "1.0.0",
   "engines": {
     "node": "^8.9"
@@ -19,9 +19,9 @@
   },
   "cds": {
     "requires": {
-      "SEPMRA_PROD_MAN": {
+      "EPM_REF_APPS_PROD_MAN_SRV": {
         "kind": "odata",
-        "model": "srv/external/SEPMRA_PROD_MAN"
+        "model": "srv/external/EPM_REF_APPS_PROD_MAN_SRV"
       },
       "db": {
         "kind": "sqlite",

@@ -1,0 +1,3158 @@
+{
+  "definitions": {
+    "MockEPMProductManagementService": {
+      "kind": "service",
+      "@path": "/EPM_REF_APPS_PROD_MAN_SRV",
+      "@source": "srv/service.cds"
+    },
+    "MockEPMProductManagementService.SEPMRA_C_PD_Product": {
+      "kind": "entity",
+      "@cds.persistence.name": "MOCKEPMPRODUCTMANAGEMENTSERVICE_SEPMRA_C_PD_PRODUCT",
+      "@cds.persistence.skip": false,
+      "@cds.persistence.table": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "DraftUUID": {
+          "@cds.persistence.name": "DRAFTUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "IsActiveEntity": {
+          "@cds.persistence.name": "ISACTIVEENTITY",
+          "key": true,
+          "type": "cds.Boolean"
+        },
+        "Activation_ac": {
+          "@cds.persistence.name": "ACTIVATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Copy_ac": {
+          "@cds.persistence.name": "COPY_AC",
+          "type": "cds.Boolean"
+        },
+        "Copy_new_supplier_ac": {
+          "@cds.persistence.name": "COPY_NEW_SUPPLIER_AC",
+          "type": "cds.Boolean"
+        },
+        "Create_review_post_ac": {
+          "@cds.persistence.name": "CREATE_REVIEW_POST_AC",
+          "type": "cds.Boolean"
+        },
+        "Delete_ext_ac": {
+          "@cds.persistence.name": "DELETE_EXT_AC",
+          "type": "cds.Boolean"
+        },
+        "Edit_ac": {
+          "@cds.persistence.name": "EDIT_AC",
+          "type": "cds.Boolean"
+        },
+        "Favorites_add_ac": {
+          "@cds.persistence.name": "FAVORITES_ADD_AC",
+          "type": "cds.Boolean"
+        },
+        "Favorites_remove_ac": {
+          "@cds.persistence.name": "FAVORITES_REMOVE_AC",
+          "type": "cds.Boolean"
+        },
+        "Favorites_toggle_ac": {
+          "@cds.persistence.name": "FAVORITES_TOGGLE_AC",
+          "type": "cds.Boolean"
+        },
+        "Mycart_add_ac": {
+          "@cds.persistence.name": "MYCART_ADD_AC",
+          "type": "cds.Boolean"
+        },
+        "Preparation_ac": {
+          "@cds.persistence.name": "PREPARATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Validation_ac": {
+          "@cds.persistence.name": "VALIDATION_AC",
+          "type": "cds.Boolean"
+        },
+        "ProductForEdit_fc": {
+          "@cds.persistence.name": "PRODUCTFOREDIT_FC",
+          "type": "cds.Integer"
+        },
+        "ProductForEdit": {
+          "@cds.persistence.name": "PRODUCTFOREDIT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProductCategory": {
+          "@cds.persistence.name": "PRODUCTCATEGORY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "MainProductCategory": {
+          "@cds.persistence.name": "MAINPRODUCTCATEGORY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "Price": {
+          "@cds.persistence.name": "PRICE",
+          "type": "cds.Decimal",
+          "precision": 16,
+          "scale": 3
+        },
+        "Currency": {
+          "@cds.persistence.name": "CURRENCY",
+          "type": "cds.String",
+          "length": 5
+        },
+        "Height": {
+          "@cds.persistence.name": "HEIGHT",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "Width": {
+          "@cds.persistence.name": "WIDTH",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "Depth": {
+          "@cds.persistence.name": "DEPTH",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "DimensionUnit": {
+          "@cds.persistence.name": "DIMENSIONUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "ProductPictureURL": {
+          "@cds.persistence.name": "PRODUCTPICTUREURL",
+          "type": "cds.String",
+          "length": 255
+        },
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProductBaseUnit": {
+          "@cds.persistence.name": "PRODUCTBASEUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "Weight": {
+          "@cds.persistence.name": "WEIGHT",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "WeightUnit": {
+          "@cds.persistence.name": "WEIGHTUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "OriginalLanguage": {
+          "@cds.persistence.name": "ORIGINALLANGUAGE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "Name": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 255
+        },
+        "DraftEntityCreationDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYCREATIONDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "DraftEntityLastChangeDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYLASTCHANGEDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "HasActiveEntity": {
+          "@cds.persistence.name": "HASACTIVEENTITY",
+          "type": "cds.Boolean"
+        },
+        "HasDraftEntity": {
+          "@cds.persistence.name": "HASDRAFTENTITY",
+          "type": "cds.Boolean"
+        },
+        "DraftAdministrativeData": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_DraftAdministrativeData",
+          "keys": [
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "DraftAdministrativeData_DraftUUID"
+            }
+          ]
+        },
+        "SiblingEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY",
+          "type": "cds.Association",
+          "target": "MockEPMProductManagementService.SEPMRA_C_PD_Product",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "SiblingEntity_Product"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "SiblingEntity_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "SiblingEntity_IsActiveEntity"
+            }
+          ]
+        },
+        "to_CollaborativeReview": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEW",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Review",
+          "keys": [
+            {
+              "ref": [
+                "ProductReviewUUID"
+              ],
+              "$generatedFieldName": "to_CollaborativeReview_ProductReviewUUID"
+            }
+          ]
+        },
+        "to_CollaborativeReviewPost": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEWPOST",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ReviewPost",
+          "keys": [
+            {
+              "ref": [
+                "ProductReviewPostUUID"
+              ],
+              "$generatedFieldName": "to_CollaborativeReviewPost_ProductReviewPostUUID"
+            }
+          ]
+        },
+        "to_Currency": {
+          "@cds.persistence.name": "TO_CURRENCY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_Currency",
+          "on": [
+            {
+              "ref": [
+                "to_Currency",
+                "Currency"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "Currency"
+              ]
+            }
+          ]
+        },
+        "to_CurrencyVH": {
+          "@cds.persistence.name": "TO_CURRENCYVH",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_CurrencyValueHelp",
+          "keys": [
+            {
+              "ref": [
+                "Currency"
+              ],
+              "$generatedFieldName": "to_CurrencyVH_Currency"
+            }
+          ]
+        },
+        "to_DimensionUnit": {
+          "@cds.persistence.name": "TO_DIMENSIONUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_DimensionUnit",
+          "on": [
+            {
+              "ref": [
+                "to_DimensionUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "DimensionUnit"
+              ]
+            }
+          ]
+        },
+        "to_MainProductCategory": {
+          "@cds.persistence.name": "TO_MAINPRODUCTCATEGORY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductMainCategory",
+          "on": [
+            {
+              "ref": [
+                "to_MainProductCategory",
+                "MainProductCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "MainProductCategory"
+              ]
+            }
+          ]
+        },
+        "to_OriginalLanguage": {
+          "@cds.persistence.name": "TO_ORIGINALLANGUAGE",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_Language",
+          "keys": [
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "to_OriginalLanguage_Language"
+            }
+          ]
+        },
+        "to_PriceRange": {
+          "@cds.persistence.name": "TO_PRICERANGE",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductPriceRange",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_PriceRange_Product"
+            }
+          ]
+        },
+        "to_ProductBaseUnit": {
+          "@cds.persistence.name": "TO_PRODUCTBASEUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_QuantityUnit",
+          "on": [
+            {
+              "ref": [
+                "to_ProductBaseUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "ProductBaseUnit"
+              ]
+            }
+          ]
+        },
+        "to_ProductCategory": {
+          "@cds.persistence.name": "TO_PRODUCTCATEGORY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductCategory",
+          "on": [
+            {
+              "ref": [
+                "to_ProductCategory",
+                "ProductCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "ProductCategory"
+              ]
+            }
+          ]
+        },
+        "to_ProductCategoryVH": {
+          "@cds.persistence.name": "TO_PRODUCTCATEGORYVH",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductCategory",
+          "keys": [
+            {
+              "ref": [
+                "ProductCategory"
+              ],
+              "$generatedFieldName": "to_ProductCategoryVH_ProductCategory"
+            }
+          ]
+        },
+        "to_ProductImage": {
+          "@cds.persistence.name": "TO_PRODUCTIMAGE",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductImage",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductImage_Product"
+            },
+            {
+              "ref": [
+                "ProductImage"
+              ],
+              "$generatedFieldName": "to_ProductImage_ProductImage"
+            }
+          ]
+        },
+        "to_ProductSalesData": {
+          "@cds.persistence.name": "TO_PRODUCTSALESDATA",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductSalesData",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ],
+              "$generatedFieldName": "to_ProductSalesData_ID"
+            }
+          ]
+        },
+        "to_ProductStock": {
+          "@cds.persistence.name": "TO_PRODUCTSTOCK",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductStock",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductStock_Product"
+            }
+          ]
+        },
+        "to_ProductText": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductText",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductText_Product"
+            },
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "to_ProductText_Language"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_ProductText_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_ProductText_IsActiveEntity"
+            }
+          ]
+        },
+        "to_ProductTextInOriginalLang": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductText",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_Product"
+            },
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_Language"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_IsActiveEntity"
+            }
+          ]
+        },
+        "to_StorageBin": {
+          "@cds.persistence.name": "TO_STORAGEBIN",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_StorageBinTP",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_StorageBin_Product"
+            },
+            {
+              "ref": [
+                "Bin"
+              ],
+              "$generatedFieldName": "to_StorageBin_Bin"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_StorageBin_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_StorageBin_IsActiveEntity"
+            }
+          ]
+        },
+        "to_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIER",
+          "type": "cds.Association",
+          "target": "MockEPMProductManagementService.SEPMRA_C_PD_Supplier",
+          "on": [
+            {
+              "ref": [
+                "to_Supplier",
+                "Supplier"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "Supplier"
+              ]
+            }
+          ]
+        },
+        "to_WeightUnit": {
+          "@cds.persistence.name": "TO_WEIGHTUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_WeightUnit",
+          "on": [
+            {
+              "ref": [
+                "to_WeightUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "WeightUnit"
+              ]
+            }
+          ]
+        },
+        "DraftAdministrativeData_DraftUUID": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA_DRAFTUUID",
+          "@odata.foreignKey4": "DraftAdministrativeData",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_Product": {
+          "@cds.persistence.name": "SIBLINGENTITY_PRODUCT",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SiblingEntity_DraftUUID": {
+          "@cds.persistence.name": "SIBLINGENTITY_DRAFTUUID",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_IsActiveEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY_ISACTIVEENTITY",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.Boolean"
+        },
+        "to_CollaborativeReview_ProductReviewUUID": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEW_PRODUCTREVIEWUUID",
+          "@odata.foreignKey4": "to_CollaborativeReview",
+          "type": "cds.UUID"
+        },
+        "to_CollaborativeReviewPost_ProductReviewPostUUID": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEWPOST_PRODUCTREVIEWPOSTUUID",
+          "@odata.foreignKey4": "to_CollaborativeReviewPost",
+          "type": "cds.UUID"
+        },
+        "to_CurrencyVH_Currency": {
+          "@cds.persistence.name": "TO_CURRENCYVH_CURRENCY",
+          "@odata.foreignKey4": "to_CurrencyVH",
+          "type": "cds.String",
+          "length": 5
+        },
+        "to_OriginalLanguage_Language": {
+          "@cds.persistence.name": "TO_ORIGINALLANGUAGE_LANGUAGE",
+          "@odata.foreignKey4": "to_OriginalLanguage",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_PriceRange_Product": {
+          "@cds.persistence.name": "TO_PRICERANGE_PRODUCT",
+          "@odata.foreignKey4": "to_PriceRange",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductCategoryVH_ProductCategory": {
+          "@cds.persistence.name": "TO_PRODUCTCATEGORYVH_PRODUCTCATEGORY",
+          "@odata.foreignKey4": "to_ProductCategoryVH",
+          "type": "cds.String",
+          "length": 40
+        },
+        "to_ProductImage_Product": {
+          "@cds.persistence.name": "TO_PRODUCTIMAGE_PRODUCT",
+          "@odata.foreignKey4": "to_ProductImage",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductImage_ProductImage": {
+          "@cds.persistence.name": "TO_PRODUCTIMAGE_PRODUCTIMAGE",
+          "@odata.foreignKey4": "to_ProductImage",
+          "type": "cds.String",
+          "length": 70
+        },
+        "to_ProductSalesData_ID": {
+          "@cds.persistence.name": "TO_PRODUCTSALESDATA_ID",
+          "@odata.foreignKey4": "to_ProductSalesData",
+          "type": "cds.LargeString"
+        },
+        "to_ProductStock_Product": {
+          "@cds.persistence.name": "TO_PRODUCTSTOCK_PRODUCT",
+          "@odata.foreignKey4": "to_ProductStock",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductText_Product": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_PRODUCT",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductText_Language": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_LANGUAGE",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_ProductText_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_DRAFTUUID",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.UUID"
+        },
+        "to_ProductText_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.Boolean"
+        },
+        "to_ProductTextInOriginalLang_Product": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_PRODUCT",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductTextInOriginalLang_Language": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_LANGUAGE",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_ProductTextInOriginalLang_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_DRAFTUUID",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.UUID"
+        },
+        "to_ProductTextInOriginalLang_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.Boolean"
+        },
+        "to_StorageBin_Product": {
+          "@cds.persistence.name": "TO_STORAGEBIN_PRODUCT",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_StorageBin_Bin": {
+          "@cds.persistence.name": "TO_STORAGEBIN_BIN",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_StorageBin_DraftUUID": {
+          "@cds.persistence.name": "TO_STORAGEBIN_DRAFTUUID",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.UUID"
+        },
+        "to_StorageBin_IsActiveEntity": {
+          "@cds.persistence.name": "TO_STORAGEBIN_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.Boolean"
+        }
+      },
+      "$syntax": "projection"
+    },
+    "MockEPMProductManagementService.SEPMRA_C_PD_Supplier": {
+      "kind": "entity",
+      "@cds.persistence.name": "MOCKEPMPRODUCTMANAGEMENTSERVICE_SEPMRA_C_PD_SUPPLIER",
+      "@cds.persistence.skip": false,
+      "@cds.persistence.table": true,
+      "query": {
+        "SELECT": {
+          "from": {
+            "ref": [
+              "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Supplier"
+            ]
+          }
+        }
+      },
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyName": {
+          "@cds.persistence.name": "COMPANYNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "EmailAddress": {
+          "@cds.persistence.name": "EMAILADDRESS",
+          "type": "cds.String",
+          "length": 255
+        },
+        "FaxNumber": {
+          "@cds.persistence.name": "FAXNUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "PhoneNumber": {
+          "@cds.persistence.name": "PHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "URL": {
+          "@cds.persistence.name": "URL",
+          "type": "cds.LargeString"
+        },
+        "to_Address": {
+          "@cds.persistence.name": "TO_ADDRESS",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_Address",
+          "keys": [
+            {
+              "ref": [
+                "AddressUUID"
+              ],
+              "$generatedFieldName": "to_Address_AddressUUID"
+            }
+          ]
+        },
+        "to_ContactPerson": {
+          "@cds.persistence.name": "TO_CONTACTPERSON",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ContactPerson",
+          "keys": [
+            {
+              "ref": [
+                "ContactPerson"
+              ],
+              "$generatedFieldName": "to_ContactPerson_ContactPerson"
+            }
+          ]
+        },
+        "to_PrimaryContactPerson": {
+          "@cds.persistence.name": "TO_PRIMARYCONTACTPERSON",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ContactPerson",
+          "keys": [
+            {
+              "ref": [
+                "ContactPerson"
+              ],
+              "$generatedFieldName": "to_PrimaryContactPerson_ContactPerson"
+            }
+          ]
+        },
+        "to_Address_AddressUUID": {
+          "@cds.persistence.name": "TO_ADDRESS_ADDRESSUUID",
+          "@odata.foreignKey4": "to_Address",
+          "type": "cds.UUID"
+        },
+        "to_ContactPerson_ContactPerson": {
+          "@cds.persistence.name": "TO_CONTACTPERSON_CONTACTPERSON",
+          "@odata.foreignKey4": "to_ContactPerson",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PrimaryContactPerson_ContactPerson": {
+          "@cds.persistence.name": "TO_PRIMARYCONTACTPERSON_CONTACTPERSON",
+          "@odata.foreignKey4": "to_PrimaryContactPerson",
+          "type": "cds.String",
+          "length": 10
+        }
+      },
+      "$syntax": "projection"
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV": {
+      "kind": "service",
+      "@source": "srv/external/EPM_REF_APPS_PROD_MAN_SRV.csn"
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.I_Currency": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_I_CURRENCY",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Currency": {
+          "@cds.persistence.name": "CURRENCY",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "Currency_Text": {
+          "@cds.persistence.name": "CURRENCY_TEXT",
+          "type": "cds.String",
+          "length": 40
+        },
+        "Decimals": {
+          "@cds.persistence.name": "DECIMALS",
+          "type": "cds.Integer"
+        },
+        "CurrencyISOCode": {
+          "@cds.persistence.name": "CURRENCYISOCODE",
+          "type": "cds.String",
+          "length": 3
+        },
+        "AlternativeCurrencyKey": {
+          "@cds.persistence.name": "ALTERNATIVECURRENCYKEY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "IsPrimaryCurrencyForISOCrcy": {
+          "@cds.persistence.name": "ISPRIMARYCURRENCYFORISOCRCY",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.I_DraftAdministrativeData": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_I_DRAFTADMINISTRATIVEDATA",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "DraftUUID": {
+          "@cds.persistence.name": "DRAFTUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "DraftEntityType": {
+          "@cds.persistence.name": "DRAFTENTITYTYPE",
+          "type": "cds.String",
+          "length": 30
+        },
+        "CreationDateTime": {
+          "@cds.persistence.name": "CREATIONDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "CreatedByUser": {
+          "@cds.persistence.name": "CREATEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "LastChangeDateTime": {
+          "@cds.persistence.name": "LASTCHANGEDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "LastChangedByUser": {
+          "@cds.persistence.name": "LASTCHANGEDBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "DraftAccessType": {
+          "@cds.persistence.name": "DRAFTACCESSTYPE",
+          "type": "cds.String",
+          "length": 1
+        },
+        "ProcessingStartDateTime": {
+          "@cds.persistence.name": "PROCESSINGSTARTDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "InProcessByUser": {
+          "@cds.persistence.name": "INPROCESSBYUSER",
+          "type": "cds.String",
+          "length": 12
+        },
+        "DraftIsKeptByUser": {
+          "@cds.persistence.name": "DRAFTISKEPTBYUSER",
+          "type": "cds.Boolean"
+        },
+        "EnqueueStartDateTime": {
+          "@cds.persistence.name": "ENQUEUESTARTDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "DraftIsCreatedByMe": {
+          "@cds.persistence.name": "DRAFTISCREATEDBYME",
+          "type": "cds.Boolean"
+        },
+        "DraftIsLastChangedByMe": {
+          "@cds.persistence.name": "DRAFTISLASTCHANGEDBYME",
+          "type": "cds.Boolean"
+        },
+        "DraftIsProcessedByMe": {
+          "@cds.persistence.name": "DRAFTISPROCESSEDBYME",
+          "type": "cds.Boolean"
+        },
+        "CreatedByUserDescription": {
+          "@cds.persistence.name": "CREATEDBYUSERDESCRIPTION",
+          "type": "cds.String",
+          "length": 80
+        },
+        "LastChangedByUserDescription": {
+          "@cds.persistence.name": "LASTCHANGEDBYUSERDESCRIPTION",
+          "type": "cds.String",
+          "length": 80
+        },
+        "InProcessByUserDescription": {
+          "@cds.persistence.name": "INPROCESSBYUSERDESCRIPTION",
+          "type": "cds.String",
+          "length": 80
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.I_Language": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_I_LANGUAGE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Language": {
+          "@cds.persistence.name": "LANGUAGE",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "Language_Text": {
+          "@cds.persistence.name": "LANGUAGE_TEXT",
+          "type": "cds.String",
+          "length": 16
+        },
+        "LanguageISOCode": {
+          "@cds.persistence.name": "LANGUAGEISOCODE",
+          "type": "cds.String",
+          "length": 2
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_CurrencyValueHelp": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_CURRENCYVALUEHELP",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Currency": {
+          "@cds.persistence.name": "CURRENCY",
+          "key": true,
+          "type": "cds.String",
+          "length": 5
+        },
+        "Currency_Text": {
+          "@cds.persistence.name": "CURRENCY_TEXT",
+          "type": "cds.String",
+          "length": 40
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ContactPerson": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_CONTACTPERSON",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "ContactPerson": {
+          "@cds.persistence.name": "CONTACTPERSON",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "FullName": {
+          "@cds.persistence.name": "FULLNAME",
+          "type": "cds.String",
+          "length": 81
+        },
+        "EmailAddress": {
+          "@cds.persistence.name": "EMAILADDRESS",
+          "type": "cds.String",
+          "length": 255
+        },
+        "FaxNumber": {
+          "@cds.persistence.name": "FAXNUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "MobilePhoneNumber": {
+          "@cds.persistence.name": "MOBILEPHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "PhoneNumber": {
+          "@cds.persistence.name": "PHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "IsMainContactPerson": {
+          "@cds.persistence.name": "ISMAINCONTACTPERSON",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_PoItmCube": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_POITMCUBE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "OrgUnitName": {
+          "@cds.persistence.name": "ORGUNITNAME",
+          "key": true,
+          "type": "cds.String",
+          "length": 20
+        },
+        "PoItmQuantity": {
+          "@cds.persistence.name": "POITMQUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "QuantityUnit": {
+          "@cds.persistence.name": "QUANTITYUNIT",
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_PRODUCT",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "DraftUUID": {
+          "@cds.persistence.name": "DRAFTUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "IsActiveEntity": {
+          "@cds.persistence.name": "ISACTIVEENTITY",
+          "key": true,
+          "type": "cds.Boolean"
+        },
+        "Activation_ac": {
+          "@cds.persistence.name": "ACTIVATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Copy_ac": {
+          "@cds.persistence.name": "COPY_AC",
+          "type": "cds.Boolean"
+        },
+        "Copy_new_supplier_ac": {
+          "@cds.persistence.name": "COPY_NEW_SUPPLIER_AC",
+          "type": "cds.Boolean"
+        },
+        "Create_review_post_ac": {
+          "@cds.persistence.name": "CREATE_REVIEW_POST_AC",
+          "type": "cds.Boolean"
+        },
+        "Delete_ext_ac": {
+          "@cds.persistence.name": "DELETE_EXT_AC",
+          "type": "cds.Boolean"
+        },
+        "Edit_ac": {
+          "@cds.persistence.name": "EDIT_AC",
+          "type": "cds.Boolean"
+        },
+        "Favorites_add_ac": {
+          "@cds.persistence.name": "FAVORITES_ADD_AC",
+          "type": "cds.Boolean"
+        },
+        "Favorites_remove_ac": {
+          "@cds.persistence.name": "FAVORITES_REMOVE_AC",
+          "type": "cds.Boolean"
+        },
+        "Favorites_toggle_ac": {
+          "@cds.persistence.name": "FAVORITES_TOGGLE_AC",
+          "type": "cds.Boolean"
+        },
+        "Mycart_add_ac": {
+          "@cds.persistence.name": "MYCART_ADD_AC",
+          "type": "cds.Boolean"
+        },
+        "Preparation_ac": {
+          "@cds.persistence.name": "PREPARATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Validation_ac": {
+          "@cds.persistence.name": "VALIDATION_AC",
+          "type": "cds.Boolean"
+        },
+        "ProductForEdit_fc": {
+          "@cds.persistence.name": "PRODUCTFOREDIT_FC",
+          "type": "cds.Integer"
+        },
+        "ProductForEdit": {
+          "@cds.persistence.name": "PRODUCTFOREDIT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProductCategory": {
+          "@cds.persistence.name": "PRODUCTCATEGORY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "MainProductCategory": {
+          "@cds.persistence.name": "MAINPRODUCTCATEGORY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "Price": {
+          "@cds.persistence.name": "PRICE",
+          "type": "cds.Decimal",
+          "precision": 16,
+          "scale": 3
+        },
+        "Currency": {
+          "@cds.persistence.name": "CURRENCY",
+          "type": "cds.String",
+          "length": 5
+        },
+        "Height": {
+          "@cds.persistence.name": "HEIGHT",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "Width": {
+          "@cds.persistence.name": "WIDTH",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "Depth": {
+          "@cds.persistence.name": "DEPTH",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "DimensionUnit": {
+          "@cds.persistence.name": "DIMENSIONUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "ProductPictureURL": {
+          "@cds.persistence.name": "PRODUCTPICTUREURL",
+          "type": "cds.String",
+          "length": 255
+        },
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProductBaseUnit": {
+          "@cds.persistence.name": "PRODUCTBASEUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "Weight": {
+          "@cds.persistence.name": "WEIGHT",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "WeightUnit": {
+          "@cds.persistence.name": "WEIGHTUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "OriginalLanguage": {
+          "@cds.persistence.name": "ORIGINALLANGUAGE",
+          "type": "cds.String",
+          "length": 2
+        },
+        "Name": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 255
+        },
+        "DraftEntityCreationDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYCREATIONDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "DraftEntityLastChangeDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYLASTCHANGEDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "HasActiveEntity": {
+          "@cds.persistence.name": "HASACTIVEENTITY",
+          "type": "cds.Boolean"
+        },
+        "HasDraftEntity": {
+          "@cds.persistence.name": "HASDRAFTENTITY",
+          "type": "cds.Boolean"
+        },
+        "DraftAdministrativeData": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_DraftAdministrativeData",
+          "keys": [
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "DraftAdministrativeData_DraftUUID"
+            }
+          ]
+        },
+        "SiblingEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "SiblingEntity_Product"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "SiblingEntity_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "SiblingEntity_IsActiveEntity"
+            }
+          ]
+        },
+        "to_CollaborativeReview": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEW",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Review",
+          "keys": [
+            {
+              "ref": [
+                "ProductReviewUUID"
+              ],
+              "$generatedFieldName": "to_CollaborativeReview_ProductReviewUUID"
+            }
+          ]
+        },
+        "to_CollaborativeReviewPost": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEWPOST",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ReviewPost",
+          "keys": [
+            {
+              "ref": [
+                "ProductReviewPostUUID"
+              ],
+              "$generatedFieldName": "to_CollaborativeReviewPost_ProductReviewPostUUID"
+            }
+          ]
+        },
+        "to_Currency": {
+          "@cds.persistence.name": "TO_CURRENCY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_Currency",
+          "on": [
+            {
+              "ref": [
+                "to_Currency",
+                "Currency"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "Currency"
+              ]
+            }
+          ]
+        },
+        "to_CurrencyVH": {
+          "@cds.persistence.name": "TO_CURRENCYVH",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_CurrencyValueHelp",
+          "keys": [
+            {
+              "ref": [
+                "Currency"
+              ],
+              "$generatedFieldName": "to_CurrencyVH_Currency"
+            }
+          ]
+        },
+        "to_DimensionUnit": {
+          "@cds.persistence.name": "TO_DIMENSIONUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_DimensionUnit",
+          "on": [
+            {
+              "ref": [
+                "to_DimensionUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "DimensionUnit"
+              ]
+            }
+          ]
+        },
+        "to_MainProductCategory": {
+          "@cds.persistence.name": "TO_MAINPRODUCTCATEGORY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductMainCategory",
+          "on": [
+            {
+              "ref": [
+                "to_MainProductCategory",
+                "MainProductCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "MainProductCategory"
+              ]
+            }
+          ]
+        },
+        "to_OriginalLanguage": {
+          "@cds.persistence.name": "TO_ORIGINALLANGUAGE",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_Language",
+          "keys": [
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "to_OriginalLanguage_Language"
+            }
+          ]
+        },
+        "to_PriceRange": {
+          "@cds.persistence.name": "TO_PRICERANGE",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductPriceRange",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_PriceRange_Product"
+            }
+          ]
+        },
+        "to_ProductBaseUnit": {
+          "@cds.persistence.name": "TO_PRODUCTBASEUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_QuantityUnit",
+          "on": [
+            {
+              "ref": [
+                "to_ProductBaseUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "ProductBaseUnit"
+              ]
+            }
+          ]
+        },
+        "to_ProductCategory": {
+          "@cds.persistence.name": "TO_PRODUCTCATEGORY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductCategory",
+          "on": [
+            {
+              "ref": [
+                "to_ProductCategory",
+                "ProductCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "ProductCategory"
+              ]
+            }
+          ]
+        },
+        "to_ProductCategoryVH": {
+          "@cds.persistence.name": "TO_PRODUCTCATEGORYVH",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductCategory",
+          "keys": [
+            {
+              "ref": [
+                "ProductCategory"
+              ],
+              "$generatedFieldName": "to_ProductCategoryVH_ProductCategory"
+            }
+          ]
+        },
+        "to_ProductImage": {
+          "@cds.persistence.name": "TO_PRODUCTIMAGE",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductImage",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductImage_Product"
+            },
+            {
+              "ref": [
+                "ProductImage"
+              ],
+              "$generatedFieldName": "to_ProductImage_ProductImage"
+            }
+          ]
+        },
+        "to_ProductSalesData": {
+          "@cds.persistence.name": "TO_PRODUCTSALESDATA",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductSalesData",
+          "keys": [
+            {
+              "ref": [
+                "ID"
+              ],
+              "$generatedFieldName": "to_ProductSalesData_ID"
+            }
+          ]
+        },
+        "to_ProductStock": {
+          "@cds.persistence.name": "TO_PRODUCTSTOCK",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductStock",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductStock_Product"
+            }
+          ]
+        },
+        "to_ProductText": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductText",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductText_Product"
+            },
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "to_ProductText_Language"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_ProductText_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_ProductText_IsActiveEntity"
+            }
+          ]
+        },
+        "to_ProductTextInOriginalLang": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductText",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_Product"
+            },
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_Language"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_ProductTextInOriginalLang_IsActiveEntity"
+            }
+          ]
+        },
+        "to_StorageBin": {
+          "@cds.persistence.name": "TO_STORAGEBIN",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_StorageBinTP",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_StorageBin_Product"
+            },
+            {
+              "ref": [
+                "Bin"
+              ],
+              "$generatedFieldName": "to_StorageBin_Bin"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_StorageBin_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_StorageBin_IsActiveEntity"
+            }
+          ]
+        },
+        "to_Supplier": {
+          "@cds.persistence.name": "TO_SUPPLIER",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Supplier",
+          "on": [
+            {
+              "ref": [
+                "to_Supplier",
+                "Supplier"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "Supplier"
+              ]
+            }
+          ]
+        },
+        "to_WeightUnit": {
+          "@cds.persistence.name": "TO_WEIGHTUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_WeightUnit",
+          "on": [
+            {
+              "ref": [
+                "to_WeightUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "WeightUnit"
+              ]
+            }
+          ]
+        },
+        "DraftAdministrativeData_DraftUUID": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA_DRAFTUUID",
+          "@odata.foreignKey4": "DraftAdministrativeData",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_Product": {
+          "@cds.persistence.name": "SIBLINGENTITY_PRODUCT",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SiblingEntity_DraftUUID": {
+          "@cds.persistence.name": "SIBLINGENTITY_DRAFTUUID",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_IsActiveEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY_ISACTIVEENTITY",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.Boolean"
+        },
+        "to_CollaborativeReview_ProductReviewUUID": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEW_PRODUCTREVIEWUUID",
+          "@odata.foreignKey4": "to_CollaborativeReview",
+          "type": "cds.UUID"
+        },
+        "to_CollaborativeReviewPost_ProductReviewPostUUID": {
+          "@cds.persistence.name": "TO_COLLABORATIVEREVIEWPOST_PRODUCTREVIEWPOSTUUID",
+          "@odata.foreignKey4": "to_CollaborativeReviewPost",
+          "type": "cds.UUID"
+        },
+        "to_CurrencyVH_Currency": {
+          "@cds.persistence.name": "TO_CURRENCYVH_CURRENCY",
+          "@odata.foreignKey4": "to_CurrencyVH",
+          "type": "cds.String",
+          "length": 5
+        },
+        "to_OriginalLanguage_Language": {
+          "@cds.persistence.name": "TO_ORIGINALLANGUAGE_LANGUAGE",
+          "@odata.foreignKey4": "to_OriginalLanguage",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_PriceRange_Product": {
+          "@cds.persistence.name": "TO_PRICERANGE_PRODUCT",
+          "@odata.foreignKey4": "to_PriceRange",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductCategoryVH_ProductCategory": {
+          "@cds.persistence.name": "TO_PRODUCTCATEGORYVH_PRODUCTCATEGORY",
+          "@odata.foreignKey4": "to_ProductCategoryVH",
+          "type": "cds.String",
+          "length": 40
+        },
+        "to_ProductImage_Product": {
+          "@cds.persistence.name": "TO_PRODUCTIMAGE_PRODUCT",
+          "@odata.foreignKey4": "to_ProductImage",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductImage_ProductImage": {
+          "@cds.persistence.name": "TO_PRODUCTIMAGE_PRODUCTIMAGE",
+          "@odata.foreignKey4": "to_ProductImage",
+          "type": "cds.String",
+          "length": 70
+        },
+        "to_ProductSalesData_ID": {
+          "@cds.persistence.name": "TO_PRODUCTSALESDATA_ID",
+          "@odata.foreignKey4": "to_ProductSalesData",
+          "type": "cds.LargeString"
+        },
+        "to_ProductStock_Product": {
+          "@cds.persistence.name": "TO_PRODUCTSTOCK_PRODUCT",
+          "@odata.foreignKey4": "to_ProductStock",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductText_Product": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_PRODUCT",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductText_Language": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_LANGUAGE",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_ProductText_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_DRAFTUUID",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.UUID"
+        },
+        "to_ProductText_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCTTEXT_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_ProductText",
+          "type": "cds.Boolean"
+        },
+        "to_ProductTextInOriginalLang_Product": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_PRODUCT",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_ProductTextInOriginalLang_Language": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_LANGUAGE",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.String",
+          "length": 2
+        },
+        "to_ProductTextInOriginalLang_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_DRAFTUUID",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.UUID"
+        },
+        "to_ProductTextInOriginalLang_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCTTEXTINORIGINALLANG_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_ProductTextInOriginalLang",
+          "type": "cds.Boolean"
+        },
+        "to_StorageBin_Product": {
+          "@cds.persistence.name": "TO_STORAGEBIN_PRODUCT",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_StorageBin_Bin": {
+          "@cds.persistence.name": "TO_STORAGEBIN_BIN",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_StorageBin_DraftUUID": {
+          "@cds.persistence.name": "TO_STORAGEBIN_DRAFTUUID",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.UUID"
+        },
+        "to_StorageBin_IsActiveEntity": {
+          "@cds.persistence.name": "TO_STORAGEBIN_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_StorageBin",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductImage": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_PRODUCTIMAGE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProductImage": {
+          "@cds.persistence.name": "PRODUCTIMAGE",
+          "key": true,
+          "type": "cds.String",
+          "length": 70
+        },
+        "FileName": {
+          "@cds.persistence.name": "FILENAME",
+          "type": "cds.String",
+          "length": 255
+        },
+        "MIMEType": {
+          "@cds.persistence.name": "MIMETYPE",
+          "type": "cds.String",
+          "length": 100
+        },
+        "Description": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String",
+          "length": 50
+        },
+        "CreationDateTime": {
+          "@cds.persistence.name": "CREATIONDATETIME",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 0
+        },
+        "LastChangedDateTime": {
+          "@cds.persistence.name": "LASTCHANGEDDATETIME",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 0
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductPriceRange": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_PRODUCTPRICERANGE",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "PriceClassification": {
+          "@cds.persistence.name": "PRICECLASSIFICATION",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PriceClassification": {
+          "@cds.persistence.name": "TO_PRICECLASSIFICATION",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_PriceClassification",
+          "on": [
+            {
+              "ref": [
+                "to_PriceClassification",
+                "PriceClassification"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "PriceClassification"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductSalesData": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_PRODUCTSALESDATA",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "ID": {
+          "@cds.persistence.name": "ID",
+          "key": true,
+          "type": "cds.LargeString"
+        },
+        "SalesOrder": {
+          "@cds.persistence.name": "SALESORDER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SalesOrderItem": {
+          "@cds.persistence.name": "SALESORDERITEM",
+          "type": "cds.String",
+          "length": 10
+        },
+        "DeliveryCalendarDate": {
+          "@cds.persistence.name": "DELIVERYCALENDARDATE",
+          "type": "cds.Date"
+        },
+        "DeliveryCalendarYear": {
+          "@cds.persistence.name": "DELIVERYCALENDARYEAR",
+          "type": "cds.String",
+          "length": 4
+        },
+        "DeliveryCalendarMonth": {
+          "@cds.persistence.name": "DELIVERYCALENDARMONTH",
+          "type": "cds.String",
+          "length": 2
+        },
+        "DeliveryCalendarMonthT": {
+          "@cds.persistence.name": "DELIVERYCALENDARMONTHT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ProductName": {
+          "@cds.persistence.name": "PRODUCTNAME",
+          "type": "cds.String",
+          "length": 255
+        },
+        "SoldToParty": {
+          "@cds.persistence.name": "SOLDTOPARTY",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SoldToPartyCompanyName": {
+          "@cds.persistence.name": "SOLDTOPARTYCOMPANYNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "SoldToPartyCountry": {
+          "@cds.persistence.name": "SOLDTOPARTYCOUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "SoldToPartyCountryName": {
+          "@cds.persistence.name": "SOLDTOPARTYCOUNTRYNAME",
+          "type": "cds.String",
+          "length": 50
+        },
+        "NetAmount": {
+          "@cds.persistence.name": "NETAMOUNT",
+          "type": "cds.Decimal",
+          "precision": 16,
+          "scale": 3
+        },
+        "Currency": {
+          "@cds.persistence.name": "CURRENCY",
+          "type": "cds.String",
+          "length": 5
+        },
+        "CurrencyT": {
+          "@cds.persistence.name": "CURRENCYT",
+          "type": "cds.String",
+          "length": 15
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductStock": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_PRODUCTSTOCK",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Quantity": {
+          "@cds.persistence.name": "QUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "QuantityUnit": {
+          "@cds.persistence.name": "QUANTITYUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "StockAvailability": {
+          "@cds.persistence.name": "STOCKAVAILABILITY",
+          "type": "cds.Integer"
+        },
+        "MinimumStockQuantity": {
+          "@cds.persistence.name": "MINIMUMSTOCKQUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "to_QuantityUnit": {
+          "@cds.persistence.name": "TO_QUANTITYUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_QuantityUnit",
+          "on": [
+            {
+              "ref": [
+                "to_QuantityUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "QuantityUnit"
+              ]
+            }
+          ]
+        },
+        "to_StockAvailability": {
+          "@cds.persistence.name": "TO_STOCKAVAILABILITY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_StockAvailability",
+          "on": [
+            {
+              "ref": [
+                "to_StockAvailability",
+                "StockAvailability"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "StockAvailability"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductText": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_PRODUCTTEXT",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Language": {
+          "@cds.persistence.name": "LANGUAGE",
+          "key": true,
+          "type": "cds.String",
+          "length": 2
+        },
+        "DraftUUID": {
+          "@cds.persistence.name": "DRAFTUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "IsActiveEntity": {
+          "@cds.persistence.name": "ISACTIVEENTITY",
+          "key": true,
+          "type": "cds.Boolean"
+        },
+        "Preparation_ac": {
+          "@cds.persistence.name": "PREPARATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Validation_ac": {
+          "@cds.persistence.name": "VALIDATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Description_fc": {
+          "@cds.persistence.name": "DESCRIPTION_FC",
+          "type": "cds.Integer"
+        },
+        "LanguageForEdit_fc": {
+          "@cds.persistence.name": "LANGUAGEFOREDIT_FC",
+          "type": "cds.Integer"
+        },
+        "Delete_mc": {
+          "@cds.persistence.name": "DELETE_MC",
+          "type": "cds.Boolean"
+        },
+        "LanguageForEdit": {
+          "@cds.persistence.name": "LANGUAGEFOREDIT",
+          "type": "cds.String",
+          "length": 2
+        },
+        "Name": {
+          "@cds.persistence.name": "NAME",
+          "type": "cds.String",
+          "length": 255
+        },
+        "Description": {
+          "@cds.persistence.name": "DESCRIPTION",
+          "type": "cds.String",
+          "length": 255
+        },
+        "DraftEntityCreationDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYCREATIONDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "DraftEntityLastChangeDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYLASTCHANGEDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "ParentDraftUUID": {
+          "@cds.persistence.name": "PARENTDRAFTUUID",
+          "type": "cds.UUID"
+        },
+        "HasActiveEntity": {
+          "@cds.persistence.name": "HASACTIVEENTITY",
+          "type": "cds.Boolean"
+        },
+        "HasDraftEntity": {
+          "@cds.persistence.name": "HASDRAFTENTITY",
+          "type": "cds.Boolean"
+        },
+        "to_Product": {
+          "@cds.persistence.name": "TO_PRODUCT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_Product_Product"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_Product_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_Product_IsActiveEntity"
+            }
+          ]
+        },
+        "DraftAdministrativeData": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_DraftAdministrativeData",
+          "keys": [
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "DraftAdministrativeData_DraftUUID"
+            }
+          ]
+        },
+        "SiblingEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ProductText",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "SiblingEntity_Product"
+            },
+            {
+              "ref": [
+                "Language"
+              ],
+              "$generatedFieldName": "SiblingEntity_Language"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "SiblingEntity_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "SiblingEntity_IsActiveEntity"
+            }
+          ]
+        },
+        "to_Language": {
+          "@cds.persistence.name": "TO_LANGUAGE",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_Language",
+          "on": [
+            {
+              "ref": [
+                "to_Language",
+                "Language"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "LanguageForEdit"
+              ]
+            }
+          ]
+        },
+        "to_Product_Product": {
+          "@cds.persistence.name": "TO_PRODUCT_PRODUCT",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_Product_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCT_DRAFTUUID",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.UUID"
+        },
+        "to_Product_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCT_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.Boolean"
+        },
+        "DraftAdministrativeData_DraftUUID": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA_DRAFTUUID",
+          "@odata.foreignKey4": "DraftAdministrativeData",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_Product": {
+          "@cds.persistence.name": "SIBLINGENTITY_PRODUCT",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SiblingEntity_Language": {
+          "@cds.persistence.name": "SIBLINGENTITY_LANGUAGE",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.String",
+          "length": 2
+        },
+        "SiblingEntity_DraftUUID": {
+          "@cds.persistence.name": "SIBLINGENTITY_DRAFTUUID",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_IsActiveEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY_ISACTIVEENTITY",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Review": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_REVIEW",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "ProductReviewUUID": {
+          "@cds.persistence.name": "PRODUCTREVIEWUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "AverageRatingValue": {
+          "@cds.persistence.name": "AVERAGERATINGVALUE",
+          "type": "cds.Decimal",
+          "precision": 4,
+          "scale": 2
+        },
+        "NumberOfReviewPosts": {
+          "@cds.persistence.name": "NUMBEROFREVIEWPOSTS",
+          "type": "cds.Integer"
+        },
+        "to_Product": {
+          "@cds.persistence.name": "TO_PRODUCT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_Product_Product"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_Product_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_Product_IsActiveEntity"
+            }
+          ]
+        },
+        "to_ReviewPost": {
+          "@cds.persistence.name": "TO_REVIEWPOST",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ReviewPost",
+          "on": [
+            {
+              "ref": [
+                "to_ReviewPost",
+                "ProductReviewUUID"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "ProductReviewUUID"
+              ]
+            }
+          ]
+        },
+        "to_Product_Product": {
+          "@cds.persistence.name": "TO_PRODUCT_PRODUCT",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_Product_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCT_DRAFTUUID",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.UUID"
+        },
+        "to_Product_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCT_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ReviewPost": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_REVIEWPOST",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "ProductReviewPostUUID": {
+          "@cds.persistence.name": "PRODUCTREVIEWPOSTUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "Delete_ac": {
+          "@cds.persistence.name": "DELETE_AC",
+          "type": "cds.Boolean"
+        },
+        "Mark_as_helpful_ac": {
+          "@cds.persistence.name": "MARK_AS_HELPFUL_AC",
+          "type": "cds.Boolean"
+        },
+        "Update_ac": {
+          "@cds.persistence.name": "UPDATE_AC",
+          "type": "cds.Boolean"
+        },
+        "ProductReviewUUID": {
+          "@cds.persistence.name": "PRODUCTREVIEWUUID",
+          "type": "cds.UUID"
+        },
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "ReviewPostTitle": {
+          "@cds.persistence.name": "REVIEWPOSTTITLE",
+          "type": "cds.String",
+          "length": 60
+        },
+        "ReviewPostText": {
+          "@cds.persistence.name": "REVIEWPOSTTEXT",
+          "type": "cds.LargeString"
+        },
+        "ReviewRatingValue": {
+          "@cds.persistence.name": "REVIEWRATINGVALUE",
+          "type": "cds.Integer"
+        },
+        "NumberOfAffirmativeAnswers": {
+          "@cds.persistence.name": "NUMBEROFAFFIRMATIVEANSWERS",
+          "type": "cds.Integer"
+        },
+        "TotalNumberOfAnswers": {
+          "@cds.persistence.name": "TOTALNUMBEROFANSWERS",
+          "type": "cds.Integer"
+        },
+        "ReviewDate": {
+          "@cds.persistence.name": "REVIEWDATE",
+          "type": "cds.Date"
+        },
+        "ContactPerson": {
+          "@cds.persistence.name": "CONTACTPERSON",
+          "type": "cds.String",
+          "length": 10
+        },
+        "IsReviewOfCurrentUser": {
+          "@cds.persistence.name": "ISREVIEWOFCURRENTUSER",
+          "type": "cds.Boolean"
+        },
+        "to_ContactPerson": {
+          "@cds.persistence.name": "TO_CONTACTPERSON",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ContactPerson",
+          "on": [
+            {
+              "ref": [
+                "to_ContactPerson",
+                "ContactPerson"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "ContactPerson"
+              ]
+            }
+          ]
+        },
+        "to_Product": {
+          "@cds.persistence.name": "TO_PRODUCT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_Product_Product"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_Product_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_Product_IsActiveEntity"
+            }
+          ]
+        },
+        "to_Product_Product": {
+          "@cds.persistence.name": "TO_PRODUCT_PRODUCT",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_Product_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCT_DRAFTUUID",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.UUID"
+        },
+        "to_Product_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCT_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_StorageBinTP": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_STORAGEBINTP",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Product": {
+          "@cds.persistence.name": "PRODUCT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "Bin": {
+          "@cds.persistence.name": "BIN",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "DraftUUID": {
+          "@cds.persistence.name": "DRAFTUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "IsActiveEntity": {
+          "@cds.persistence.name": "ISACTIVEENTITY",
+          "key": true,
+          "type": "cds.Boolean"
+        },
+        "Preparation_ac": {
+          "@cds.persistence.name": "PREPARATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Validation_ac": {
+          "@cds.persistence.name": "VALIDATION_AC",
+          "type": "cds.Boolean"
+        },
+        "Quantity": {
+          "@cds.persistence.name": "QUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "LotSizeQuantity": {
+          "@cds.persistence.name": "LOTSIZEQUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "MinimumStockQuantity": {
+          "@cds.persistence.name": "MINIMUMSTOCKQUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "QuantityUnit": {
+          "@cds.persistence.name": "QUANTITYUNIT",
+          "type": "cds.String",
+          "length": 3
+        },
+        "StockAvailability": {
+          "@cds.persistence.name": "STOCKAVAILABILITY",
+          "type": "cds.Integer"
+        },
+        "OrganizationalUnit": {
+          "@cds.persistence.name": "ORGANIZATIONALUNIT",
+          "type": "cds.String",
+          "length": 10
+        },
+        "DeviationRangeLow": {
+          "@cds.persistence.name": "DEVIATIONRANGELOW",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "ToleranceRangeLow": {
+          "@cds.persistence.name": "TOLERANCERANGELOW",
+          "type": "cds.Decimal",
+          "precision": 14,
+          "scale": 3
+        },
+        "ToleranceRangeHigh": {
+          "@cds.persistence.name": "TOLERANCERANGEHIGH",
+          "type": "cds.Decimal",
+          "precision": 17,
+          "scale": 3
+        },
+        "DeviationRangeHigh": {
+          "@cds.persistence.name": "DEVIATIONRANGEHIGH",
+          "type": "cds.Decimal",
+          "precision": 17,
+          "scale": 3
+        },
+        "MinimumStock": {
+          "@cds.persistence.name": "MINIMUMSTOCK",
+          "type": "cds.Integer"
+        },
+        "MaximumStock": {
+          "@cds.persistence.name": "MAXIMUMSTOCK",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "PoItmQuantity": {
+          "@cds.persistence.name": "POITMQUANTITY",
+          "type": "cds.Decimal",
+          "precision": 13,
+          "scale": 3
+        },
+        "DraftEntityCreationDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYCREATIONDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "DraftEntityLastChangeDateTime": {
+          "@cds.persistence.name": "DRAFTENTITYLASTCHANGEDATETIME",
+          "type": "cds.Timestamp"
+        },
+        "HasActiveEntity": {
+          "@cds.persistence.name": "HASACTIVEENTITY",
+          "type": "cds.Boolean"
+        },
+        "HasDraftEntity": {
+          "@cds.persistence.name": "HASDRAFTENTITY",
+          "type": "cds.Boolean"
+        },
+        "to_Product": {
+          "@cds.persistence.name": "TO_PRODUCT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Product",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "to_Product_Product"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "to_Product_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "to_Product_IsActiveEntity"
+            }
+          ]
+        },
+        "DraftAdministrativeData": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.I_DraftAdministrativeData",
+          "keys": [
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "DraftAdministrativeData_DraftUUID"
+            }
+          ]
+        },
+        "SiblingEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_StorageBinTP",
+          "keys": [
+            {
+              "ref": [
+                "Product"
+              ],
+              "$generatedFieldName": "SiblingEntity_Product"
+            },
+            {
+              "ref": [
+                "Bin"
+              ],
+              "$generatedFieldName": "SiblingEntity_Bin"
+            },
+            {
+              "ref": [
+                "DraftUUID"
+              ],
+              "$generatedFieldName": "SiblingEntity_DraftUUID"
+            },
+            {
+              "ref": [
+                "IsActiveEntity"
+              ],
+              "$generatedFieldName": "SiblingEntity_IsActiveEntity"
+            }
+          ]
+        },
+        "to_OrganizationalUnit": {
+          "@cds.persistence.name": "TO_ORGANIZATIONALUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_OrganizationalUnit",
+          "on": [
+            {
+              "ref": [
+                "to_OrganizationalUnit",
+                "OrganizationalUnit"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "OrganizationalUnit"
+              ]
+            }
+          ]
+        },
+        "to_QuantityUnit": {
+          "@cds.persistence.name": "TO_QUANTITYUNIT",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_QuantityUnit",
+          "on": [
+            {
+              "ref": [
+                "to_QuantityUnit",
+                "UnitOfMeasure"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "QuantityUnit"
+              ]
+            }
+          ]
+        },
+        "to_StockAvailability": {
+          "@cds.persistence.name": "TO_STOCKAVAILABILITY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_StockAvailability",
+          "on": [
+            {
+              "ref": [
+                "to_StockAvailability",
+                "StockAvailability"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "StockAvailability"
+              ]
+            }
+          ]
+        },
+        "to_Product_Product": {
+          "@cds.persistence.name": "TO_PRODUCT_PRODUCT",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_Product_DraftUUID": {
+          "@cds.persistence.name": "TO_PRODUCT_DRAFTUUID",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.UUID"
+        },
+        "to_Product_IsActiveEntity": {
+          "@cds.persistence.name": "TO_PRODUCT_ISACTIVEENTITY",
+          "@odata.foreignKey4": "to_Product",
+          "type": "cds.Boolean"
+        },
+        "DraftAdministrativeData_DraftUUID": {
+          "@cds.persistence.name": "DRAFTADMINISTRATIVEDATA_DRAFTUUID",
+          "@odata.foreignKey4": "DraftAdministrativeData",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_Product": {
+          "@cds.persistence.name": "SIBLINGENTITY_PRODUCT",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SiblingEntity_Bin": {
+          "@cds.persistence.name": "SIBLINGENTITY_BIN",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.String",
+          "length": 10
+        },
+        "SiblingEntity_DraftUUID": {
+          "@cds.persistence.name": "SIBLINGENTITY_DRAFTUUID",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.UUID"
+        },
+        "SiblingEntity_IsActiveEntity": {
+          "@cds.persistence.name": "SIBLINGENTITY_ISACTIVEENTITY",
+          "@odata.foreignKey4": "SiblingEntity",
+          "type": "cds.Boolean"
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_Supplier": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_C_PD_SUPPLIER",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "Supplier": {
+          "@cds.persistence.name": "SUPPLIER",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "CompanyName": {
+          "@cds.persistence.name": "COMPANYNAME",
+          "type": "cds.String",
+          "length": 80
+        },
+        "EmailAddress": {
+          "@cds.persistence.name": "EMAILADDRESS",
+          "type": "cds.String",
+          "length": 255
+        },
+        "FaxNumber": {
+          "@cds.persistence.name": "FAXNUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "PhoneNumber": {
+          "@cds.persistence.name": "PHONENUMBER",
+          "type": "cds.String",
+          "length": 30
+        },
+        "URL": {
+          "@cds.persistence.name": "URL",
+          "type": "cds.LargeString"
+        },
+        "to_Address": {
+          "@cds.persistence.name": "TO_ADDRESS",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_Address",
+          "keys": [
+            {
+              "ref": [
+                "AddressUUID"
+              ],
+              "$generatedFieldName": "to_Address_AddressUUID"
+            }
+          ]
+        },
+        "to_ContactPerson": {
+          "@cds.persistence.name": "TO_CONTACTPERSON",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ContactPerson",
+          "keys": [
+            {
+              "ref": [
+                "ContactPerson"
+              ],
+              "$generatedFieldName": "to_ContactPerson_ContactPerson"
+            }
+          ]
+        },
+        "to_PrimaryContactPerson": {
+          "@cds.persistence.name": "TO_PRIMARYCONTACTPERSON",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_C_PD_ContactPerson",
+          "keys": [
+            {
+              "ref": [
+                "ContactPerson"
+              ],
+              "$generatedFieldName": "to_PrimaryContactPerson_ContactPerson"
+            }
+          ]
+        },
+        "to_Address_AddressUUID": {
+          "@cds.persistence.name": "TO_ADDRESS_ADDRESSUUID",
+          "@odata.foreignKey4": "to_Address",
+          "type": "cds.UUID"
+        },
+        "to_ContactPerson_ContactPerson": {
+          "@cds.persistence.name": "TO_CONTACTPERSON_CONTACTPERSON",
+          "@odata.foreignKey4": "to_ContactPerson",
+          "type": "cds.String",
+          "length": 10
+        },
+        "to_PrimaryContactPerson_ContactPerson": {
+          "@cds.persistence.name": "TO_PRIMARYCONTACTPERSON_CONTACTPERSON",
+          "@odata.foreignKey4": "to_PrimaryContactPerson",
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_Address": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_ADDRESS",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "AddressUUID": {
+          "@cds.persistence.name": "ADDRESSUUID",
+          "key": true,
+          "type": "cds.UUID"
+        },
+        "CityName": {
+          "@cds.persistence.name": "CITYNAME",
+          "type": "cds.String",
+          "length": 40
+        },
+        "PostalCode": {
+          "@cds.persistence.name": "POSTALCODE",
+          "type": "cds.String",
+          "length": 10
+        },
+        "StreetName": {
+          "@cds.persistence.name": "STREETNAME",
+          "type": "cds.String",
+          "length": 60
+        },
+        "HouseNumber": {
+          "@cds.persistence.name": "HOUSENUMBER",
+          "type": "cds.String",
+          "length": 10
+        },
+        "Country": {
+          "@cds.persistence.name": "COUNTRY",
+          "type": "cds.String",
+          "length": 3
+        },
+        "AddressValidityStartDate": {
+          "@cds.persistence.name": "ADDRESSVALIDITYSTARTDATE",
+          "type": "cds.Date"
+        },
+        "AddressValidityEndDate": {
+          "@cds.persistence.name": "ADDRESSVALIDITYENDDATE",
+          "type": "cds.Date"
+        },
+        "Latitude": {
+          "@cds.persistence.name": "LATITUDE",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 12
+        },
+        "Longitude": {
+          "@cds.persistence.name": "LONGITUDE",
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 12
+        },
+        "FormattedAddress": {
+          "@cds.persistence.name": "FORMATTEDADDRESS",
+          "type": "cds.String",
+          "length": 255
+        },
+        "FullAddress": {
+          "@cds.persistence.name": "FULLADDRESS",
+          "type": "cds.String",
+          "length": 255
+        },
+        "AddressType": {
+          "@cds.persistence.name": "ADDRESSTYPE",
+          "type": "cds.String",
+          "length": 2
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_DimensionUnit": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_DIMENSIONUNIT",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "UnitOfMeasure": {
+          "@cds.persistence.name": "UNITOFMEASURE",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "UnitOfMeasure_Text": {
+          "@cds.persistence.name": "UNITOFMEASURE_TEXT",
+          "type": "cds.String",
+          "length": 6
+        },
+        "UnitOfMeasureISOCode": {
+          "@cds.persistence.name": "UNITOFMEASUREISOCODE",
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_OrganizationalUnit": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_ORGANIZATIONALUNIT",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "OrganizationalUnit": {
+          "@cds.persistence.name": "ORGANIZATIONALUNIT",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "OrganizationalUnitName": {
+          "@cds.persistence.name": "ORGANIZATIONALUNITNAME",
+          "type": "cds.String",
+          "length": 20
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_PriceClassification": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_PRICECLASSIFICATION",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "PriceClassification": {
+          "@cds.persistence.name": "PRICECLASSIFICATION",
+          "key": true,
+          "type": "cds.String",
+          "length": 10
+        },
+        "PriceClassification_Text": {
+          "@cds.persistence.name": "PRICECLASSIFICATION_TEXT",
+          "type": "cds.String",
+          "length": 60
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductCategory": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_PRODUCTCATEGORY",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "ProductCategory": {
+          "@cds.persistence.name": "PRODUCTCATEGORY",
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "MainProductCategory": {
+          "@cds.persistence.name": "MAINPRODUCTCATEGORY",
+          "type": "cds.String",
+          "length": 40
+        },
+        "to_MainCategory": {
+          "@cds.persistence.name": "TO_MAINCATEGORY",
+          "type": "cds.Association",
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductMainCategory",
+          "on": [
+            {
+              "ref": [
+                "to_MainCategory",
+                "MainProductCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "MainProductCategory"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductMainCategory": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_PRODUCTMAINCATEGORY",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "MainProductCategory": {
+          "@cds.persistence.name": "MAINPRODUCTCATEGORY",
+          "key": true,
+          "type": "cds.String",
+          "length": 40
+        },
+        "to_Category": {
+          "@cds.persistence.name": "TO_CATEGORY",
+          "type": "cds.Association",
+          "cardinality": {
+            "max": "*"
+          },
+          "target": "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_ProductCategory",
+          "on": [
+            {
+              "ref": [
+                "to_Category",
+                "MainProductCategory"
+              ]
+            },
+            "=",
+            {
+              "ref": [
+                "MainProductCategory"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_QuantityUnit": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_QUANTITYUNIT",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "UnitOfMeasure": {
+          "@cds.persistence.name": "UNITOFMEASURE",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "UnitOfMeasure_Text": {
+          "@cds.persistence.name": "UNITOFMEASURE_TEXT",
+          "type": "cds.String",
+          "length": 6
+        },
+        "UnitOfMeasureISOCode": {
+          "@cds.persistence.name": "UNITOFMEASUREISOCODE",
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_StockAvailability": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_STOCKAVAILABILITY",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "StockAvailability": {
+          "@cds.persistence.name": "STOCKAVAILABILITY",
+          "key": true,
+          "type": "cds.Integer"
+        },
+        "StockAvailability_Text": {
+          "@cds.persistence.name": "STOCKAVAILABILITY_TEXT",
+          "type": "cds.String",
+          "length": 60
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.SEPMRA_I_WeightUnit": {
+      "kind": "entity",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_SEPMRA_I_WEIGHTUNIT",
+      "@cds.persistence.skip": true,
+      "elements": {
+        "UnitOfMeasure": {
+          "@cds.persistence.name": "UNITOFMEASURE",
+          "key": true,
+          "type": "cds.String",
+          "length": 3
+        },
+        "UnitOfMeasure_Text": {
+          "@cds.persistence.name": "UNITOFMEASURE_TEXT",
+          "type": "cds.String",
+          "length": 6
+        },
+        "UnitOfMeasureISOCode": {
+          "@cds.persistence.name": "UNITOFMEASUREISOCODE",
+          "type": "cds.String",
+          "length": 3
+        }
+      }
+    },
+    "EPM_REF_APPS_PROD_MAN_SRV.ValidationFunctionResult": {
+      "kind": "type",
+      "@cds.persistence.name": "EPM_REF_APPS_PROD_MAN_SRV_VALIDATIONFUNCTIONRESULT",
+      "elements": {
+        "IsValid": {
+          "@cds.persistence.name": "ISVALID",
+          "type": "cds.Boolean"
+        }
+      }
+    }
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.21.1"
+  },
+  "$version": "1.0",
+  "@sql_mapping": "plain"
+}

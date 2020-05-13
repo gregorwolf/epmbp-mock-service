@@ -1,7 +1,10 @@
-using { SEPMRA_PROD_MAN } from './external/SEPMRA_PROD_MAN';
+using { EPM_REF_APPS_PROD_MAN_SRV } from './external/EPM_REF_APPS_PROD_MAN_SRV';
 
-service MockEPMProductManagementService  @(path:'/SEPMRA_PROD_MAN') {
+service MockEPMProductManagementService  @(path:'/EPM_REF_APPS_PROD_MAN_SRV') {
   @cds.persistence.skip:false
   @cds.persistence.table
-  entity SEPMRA_C_PD_Supplier as projection on SEPMRA_PROD_MAN.SEPMRA_C_PD_Supplier;
+  entity Suppliers as projection on EPM_REF_APPS_PROD_MAN_SRV.Suppliers;
+  @cds.persistence.skip:false
+  @cds.persistence.table
+  entity Products as projection on EPM_REF_APPS_PROD_MAN_SRV.Products;
 }

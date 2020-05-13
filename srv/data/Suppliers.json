@@ -1,0 +1,38 @@
+[
+  {
+    "Id": "100000000",
+    "Name": "SAP",
+    "Phone": "0622734567",
+    "Email": "do.not.reply@sap.com",
+    "WebAddress": "http://www.sap.com",
+    "FormattedAddress": "Dietmar-Hopp-Allee 16, 69190 Walldorf, DE",
+    "FormattedContactName": "Harald Gahn",
+    "ContactPhone1": "0622746358",
+    "ContactPhone2": "0622734004",
+    "ContactEmail": "hjg@sap.com"
+  },
+  {
+    "Id": "100000001",
+    "Name": "Becker Berlin",
+    "Phone": "3088530",
+    "Email": "dagmar.schulze@beckerberlin.de",
+    "WebAddress": "http://www.beckerberlin.de",
+    "FormattedAddress": "Calvinstraße 36, 13467 Berlin, DE",
+    "FormattedContactName": "Ursula Wexler",
+    "ContactPhone1": "3088529",
+    "ContactPhone2": "3088004",
+    "ContactEmail": "ursula.wexler@beckerberlin.de"
+  },
+  {
+    "Id": "100000002",
+    "Name": "DelBont Industries",
+    "Phone": "3023352668",
+    "Email": "maria.brown@delbont.com",
+    "WebAddress": "http://www.delbont.com",
+    "FormattedAddress": "1 2345 King Street 1, 19899 Wilmington, Delaware, US",
+    "FormattedContactName": "Sam Pelt",
+    "ContactPhone1": "25621140333",
+    "ContactPhone2": "3023352004",
+    "ContactEmail": "sam.pelt@delbont.com"
+  }
+]
