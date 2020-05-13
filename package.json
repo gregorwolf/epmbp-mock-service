@@ -1,21 +1,34 @@
 {
   "name": "mock-service-gwsample",
-  "description": "Mock Service for GWSAMPLE_BASIC",
+  "description": "Mock Service for SEPMRA_PROD_MAN",
   "version": "1.0.0",
   "engines": {
     "node": "^8.9"
   },
   "scripts": {
-    "edmx2csn": "node_modules/@sap/edmx2csn/bin/edmx2csn.js -i srv/external/ZEPM_BP_SRV.edmx.xml -o srv/external/csn/ZEPM_BP_SRV.json",
-    "start": "node serverv2.js"
+    "start": "PORT=3000 node v2proxy"
   },
   "dependencies": {
     "@sap/cds": "latest",
-    "@sap/cds-odata-v2-adapter-proxy": "^1.4.25",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.4.30",
     "express": "^4.17.1"
   },
   "devDependencies": {
     "@sap/edmx2csn": "^1.0.9",
-    "sqlite3": "^4.1.1"
+    "sqlite3": "^4.2.0"
+  },
+  "cds": {
+    "requires": {
+      "SEPMRA_PROD_MAN": {
+        "kind": "odata",
+        "model": "srv/external/SEPMRA_PROD_MAN"
+      },
+      "db": {
+        "kind": "sqlite",
+        "model": [
+          "srv/"
+        ]
+      }
+    }
   }
 }
