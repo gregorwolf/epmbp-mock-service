@@ -1,5 +1,11 @@
 ### OData V2
 GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/
+### OData V2 Metadata
+GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/$metadata
+### OData V2 read Products
+GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Products
+### OData V2 read Suppliers
+GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Suppliers
 
 ### OData V4
 GET http://localhost:3000/EPM_REF_APPS_PROD_MAN_SRV/

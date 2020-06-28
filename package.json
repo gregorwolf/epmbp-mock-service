@@ -12,7 +12,7 @@
     "start": "PORT=3000 node v2proxy"
   },
   "dependencies": {
-    "@sap/cds": "latest",
+    "@sap/cds": "^3.34.3",
     "@sap/cds-odata-v2-adapter-proxy": "^1.4.36",
     "express": "^4.17.1"
   },
