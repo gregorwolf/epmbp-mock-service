@@ -6,11 +6,14 @@
     "node": "^8.9"
   },
   "scripts": {
+    "setup": "npm install && npm run build && npm run deploy:local",
+    "build": "cds build/all --clean",
+    "deploy:local": "cds deploy",
     "start": "PORT=3000 node v2proxy"
   },
   "dependencies": {
     "@sap/cds": "latest",
-    "@sap/cds-odata-v2-adapter-proxy": "^1.4.30",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.4.36",
     "express": "^4.17.1"
   },
   "devDependencies": {
@@ -26,7 +29,7 @@
       "db": {
         "kind": "sqlite",
         "model": [
-          "srv/"
+          "srv"
         ]
       }
     }

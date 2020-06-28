@@ -8,6 +8,9 @@
             "name": "cds run",
             "type": "node",
             "request": "launch",
+            "env": {
+                "PORT":"3000",
+            },
             "program": "${workspaceFolder}/.vscode/cds", "args": [ "run" ],
             "skipFiles": [
                 "<node_internals>/**/*.js",
