@@ -9,9 +9,10 @@
     "start": "PORT=3000 cds run --with-mocks --in-memory"
   },
   "dependencies": {
-    "@sap/cds": "^3.34.3",
+    "@sap/cds": "^4.1.7",
     "@sap/cds-odata-v2-adapter-proxy": "^1.4.42",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "@sap/cds-dk": "^2.0.7"
   },
   "devDependencies": {
     "@sap/edmx2csn": "^1.0.9",
