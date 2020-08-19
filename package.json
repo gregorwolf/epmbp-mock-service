@@ -6,31 +6,22 @@
     "node": "^8.9"
   },
   "scripts": {
-    "setup": "npm install && npm run build && npm run deploy:local",
-    "build": "cds build/all --clean",
-    "deploy:local": "cds deploy",
-    "start": "PORT=3000 node v2proxy"
+    "start": "PORT=3000 cds run --with-mocks --in-memory"
   },
   "dependencies": {
     "@sap/cds": "^3.34.3",
-    "@sap/cds-odata-v2-adapter-proxy": "^1.4.36",
+    "@sap/cds-odata-v2-adapter-proxy": "^1.4.42",
     "express": "^4.17.1"
   },
   "devDependencies": {
     "@sap/edmx2csn": "^1.0.9",
-    "sqlite3": "^4.2.0"
+    "sqlite3": "^5.0.0"
   },
   "cds": {
     "requires": {
       "EPM_REF_APPS_PROD_MAN_SRV": {
         "kind": "odata",
         "model": "srv/external/EPM_REF_APPS_PROD_MAN_SRV"
-      },
-      "db": {
-        "kind": "sqlite",
-        "model": [
-          "srv"
-        ]
       }
     }
   }
