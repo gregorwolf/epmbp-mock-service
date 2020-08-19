@@ -5,9 +5,8 @@ module.exports = db => {
   const { Products, Suppliers } = db.entities(
     'MockEPMProductManagementService'
   )
-
-  DELETE.from(Products+'')
-  INSERT.into(Products).entries(oProducts)
-  DELETE.from(Suppliers+'')
-  INSERT.into(Suppliers).entries(oSuppliers)
+  return cds.run ([
+    INSERT.into(Products).entries(oProducts),
+    INSERT.into(Suppliers).entries(oSuppliers),
+  ])
 }
