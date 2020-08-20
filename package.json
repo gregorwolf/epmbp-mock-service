@@ -6,7 +6,7 @@
     "node": "^8.9"
   },
   "scripts": {
-    "start": "PORT=3000 cds run --with-mocks --in-memory"
+    "start": "cross-env PORT=3000 cds run --with-mocks --in-memory"
   },
   "dependencies": {
     "@sap/cds": "^4.1.7",
@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@sap/edmx2csn": "^1.0.9",
+    "cross-env": "^7.0.2",
     "sqlite3": "^5.0.0"
   },
   "cds": {
