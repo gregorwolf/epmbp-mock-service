@@ -4,9 +4,12 @@ GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/
 GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/$metadata
 ### OData V2 read Products
 GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Products
+### OData V2 read Single Product
+GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Products('195490332')
 ### OData V2 read Suppliers
 GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Suppliers
-
+### OData V2 read Single Supplier
+GET http://localhost:3000/sap/opu/odata/sap/EPM_REF_APPS_PROD_MAN_SRV/Suppliers('100000000')
 ### OData V4
 GET http://localhost:3000/EPM_REF_APPS_PROD_MAN_SRV/
 ### OData V4 Metadata
